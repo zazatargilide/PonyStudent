@@ -27,25 +27,34 @@ class Student:
       print("Error! The item wasnt at the list in first place!")
 
   def greetings(self):
-    print("Hello, my name is", self.name , "!")
+    print("Hello, my name is", self.name + "!")
 
   def greetings_fullname(self):
-    print("Hello, my full name is", self.full_name , "!")
+    print("Hello, my full name is", self.full_name + "!")
 
   def getting_older(self):
     self.age = self.age + 1
 
   def exchange_program_check(self):
     if self.exchange_program == True:
-      print( "Student" + self.full_name + " is from exchange program")
+      print( "Student", self.full_name, "is from exchange program")
     else:
-      print( "Student" + self.full_name + " isn't from exchange program")
+      print( "Student", self.full_name, "isn't from exchange program")
 
   def true_age(self):
     day,month,year = map(int, self.birthdate.split("-"))
     today = datetime.date.today()
     age = today.year - year - ((today.month, today.day) < (month, day))
-    print(self.name, "is", age ,"years.")
+    print(self.full_name, "is", age ,"years.")
+
+def give_subject_and_grade(self):
+  pass
+
+def fix_subject(self):
+  pass
+
+def fix_grade(self):
+  pass
 
 class Pony(Student):
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
@@ -72,4 +81,8 @@ applejack.getting_older()
 print(applejack.age)
 applejack.exchange_program_check()
 mike_smit.exchange_program_check()
+mike_smit.true_age()
+print(mike_smit.age)
+mike_smit.getting_older()
+print(mike_smit.age)
 mike_smit.true_age()
