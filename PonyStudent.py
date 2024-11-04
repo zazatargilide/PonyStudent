@@ -48,7 +48,18 @@ class Student:
     print(self.full_name, "is", age ,"years.")
 
   def give_subject_and_grade(self):
-    pass
+    print(self.grades)
+    name_subject = input("Please enter new subject's name: ")
+
+    if name_subject not in self.grades:
+        mark = input("Please enter mark for new subject: ")
+        print(name_subject + "was added to the grades dictionary with", mark, "mark now.")
+        self.grades[name_subject] = mark
+        print(self.grades)
+    
+    else:
+      print("Error! The subject already exits!")
+
 
   def fix_subject(self):
     print(self.grades)
@@ -109,4 +120,4 @@ print(mike_smit.age)
 mike_smit.getting_older()
 print(mike_smit.age)
 mike_smit.true_age()
-mike_smit.fix_grade()
+mike_smit.give_subject_and_grade()
