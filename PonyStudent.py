@@ -47,14 +47,37 @@ class Student:
     age = today.year - year - ((today.month, today.day) < (month, day))
     print(self.full_name, "is", age ,"years.")
 
-def give_subject_and_grade(self):
-  pass
+  def give_subject_and_grade(self):
+    pass
 
-def fix_subject(self):
-  pass
+  def fix_subject(self):
+    print(self.grades)
+    name_subject = input("Please enter subjects name that you want to change: ")
 
-def fix_grade(self):
-  pass
+    if name_subject in self.grades:
+        new_name_subject = input("Please enter new subject name: ")
+        print(name_subject, "subjects name was changed to", new_name_subject, "now.")
+        self.grades[new_name_subject] = self.grades.pop(name_subject)
+        print(self.grades)
+
+    else:
+      print("Error! The subject was not found!")
+
+  def fix_grade(self):
+    print(self.grades)
+    name_subject = input("Please enter subject's name that the grade of you want to change: ")
+
+    if name_subject in self.grades:
+        mark = input("Please enter mark that you want to change: ")
+        print(name_subject + "s' subjects grade was changed to", mark, "now.")
+        self.grades[name_subject] = mark
+        print(self.grades)
+    
+    else:
+      print("Error! The subject was not found!")
+
+  def student_from_terminal(self):
+    pass
 
 class Pony(Student):
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
@@ -86,3 +109,4 @@ print(mike_smit.age)
 mike_smit.getting_older()
 print(mike_smit.age)
 mike_smit.true_age()
+mike_smit.fix_grade()
