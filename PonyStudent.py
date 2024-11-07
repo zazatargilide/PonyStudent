@@ -2,7 +2,6 @@ import datetime
 
 class Student:
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
-    print("student")
     self.name = name
     self.surname = surname
     self.full_name = self.name + " " + self.surname # this should be str - 'Tom Smith'
