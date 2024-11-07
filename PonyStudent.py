@@ -56,10 +56,8 @@ class Student:
         print(name_subject + "was added to the grades dictionary with", mark, "mark now.")
         self.grades[name_subject] = mark
         print(self.grades)
-    
     else:
       print("Error! The subject already exits!")
-
 
   def fix_subject(self):
     print(self.grades)
@@ -70,7 +68,6 @@ class Student:
         print(name_subject, "subjects name was changed to", new_name_subject, "now.")
         self.grades[new_name_subject] = self.grades.pop(name_subject)
         print(self.grades)
-
     else:
       print("Error! The subject was not found!")
 
@@ -83,7 +80,6 @@ class Student:
         print(name_subject + "s' subjects grade was changed to", mark, "now.")
         self.grades[name_subject] = mark
         print(self.grades)
-    
     else:
       print("Error! The subject was not found!")
 
