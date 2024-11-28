@@ -16,14 +16,14 @@ class Student:
     new_device = input("Please enter new device: ")
     self.devices.append(new_device)
 
-  def device_list_ellement_remove(self):
+  def device_list_element_remove(self):
     print(self.devices)
     device_remove = input("Please enter device to remove: ")
     if device_remove in self.devices:
       self.devices.remove(device_remove)
       print(device_remove + " had been removed from " + self.full_name + "'s device list successfully!")
     else:
-      print("Error! The item wasnt at the list in first place!")
+      print("Error! The item wasn't at the list in first place!")
 
   def greetings(self):
     print("Hello, my name is", self.name + "!")
@@ -102,17 +102,3 @@ mike_smit = Student(
 
 twiglight_sparkle = Pony("Twiglight Sparkle", "Esacha", 28,  73.2, ['PC', 'Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'p.e.': 4 }, "1998-04-23")
 applejack = Pony("Apple Jack", "Bagcabax", 26, 85.3, ['Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'gardening':4}, "1998-04-23")
-
-mike_smit.greetings_fullname()
-applejack.greetings()
-print(applejack.age)
-applejack.getting_older()
-print(applejack.age)
-applejack.exchange_program_check()
-mike_smit.exchange_program_check()
-mike_smit.true_age()
-print(mike_smit.age)
-mike_smit.getting_older()
-print(mike_smit.age)
-mike_smit.true_age()
-mike_smit.give_subject_and_grade()
