@@ -11,7 +11,7 @@ class Student:
     self.grades = grades # dict - {'oop': 5, 'marketing': 4.5}
     self.birthdate = birthdate # date - 11-04-93
     self.exchange_program = False
-  
+
   def device_list_append(self):
     new_device = input("Please enter new device: ")
     self.devices.append(new_device)
