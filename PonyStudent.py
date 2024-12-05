@@ -4,7 +4,7 @@ class Student:
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
     self.name = name
     self.surname = surname
-    self.full_name = self.name + " " + self.surname # this should be str - 'Tom Smith'
+    self.full_name = self.name, self.surname # this should be str - 'Tom Smith'
     self.age = age # int - 2
     self.weight = weight # float - 70.5 KG
     self.devices = devices # list - ['PC', 'Phone', 'Laptop']
@@ -81,9 +81,6 @@ class Student:
         print(self.grades)
     else:
       print("Error! The subject was not found!")
-
-  def student_from_terminal(self):
-    pass
 
 class Pony(Student):
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
