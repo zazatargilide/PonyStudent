@@ -4,13 +4,13 @@ class Student:
   def __init__(self, name, surname, age, weight, devices, grades, birthdate):
     self.name = name
     self.surname = surname
-    self.full_name = self.name, self.surname # this should be str - 'Tom Smith'
+    self.full_name = self.name+" "+ self.surname # this should be str - 'Tom Smith'
     self.age = age # int - 2
     self.weight = weight # float - 70.5 KG
     self.devices = devices # list - ['PC', 'Phone', 'Laptop']
     self.grades = grades # dict - {'oop': 5, 'marketing': 4.5}
     self.birthdate = birthdate # date - 11-04-93
-    self.exchange_program = False
+    self.exchange_program = False #boolean
 
   def device_list_append(self):
     new_device = input("Please enter new device: ")
@@ -55,8 +55,10 @@ class Student:
         print(name_subject + "was added to the grades dictionary with", mark, "mark now.")
         self.grades[name_subject] = mark
         print(self.grades)
+    elif name_subject in self.grades:
+      print("The subject already exits!")
     else:
-      print("Error! The subject already exits!")
+      print("Error!")
 
   def fix_subject(self):
     print(self.grades)
@@ -97,5 +99,6 @@ mike_smit = Student(
   grades = {'math': 5, 'cooking': 4.5, 'p.e.':4},
   birthdate = "23-12-1999")
 
-twiglight_sparkle = Pony("Twiglight Sparkle", "Esacha", 28,  73.2, ['PC', 'Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'p.e.': 4 }, "1998-04-23")
-applejack = Pony("Apple Jack", "Bagcabax", 26, 85.3, ['Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'gardening':4}, "1998-04-23")
+twiglight_sparkle = Pony("Twiglight Sparkle", "Moon", 28,  73.2, ['PC', 'Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'p.e.': 4 }, "23-11-2005")
+applejack = Pony("Apple Jack", "Bagcabax", 26, 85.3, ['Phone', 'Laptop'], {'math': 5, 'english': 4.5, 'gardening':4}, "23-04-1998")
+twiglight_sparkle.true_age()
